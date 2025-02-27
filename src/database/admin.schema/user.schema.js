@@ -2,16 +2,20 @@ import mongoose, { mongo } from "mongoose";
 
 const userSchema= new mongoose.Schema({
     username:{
-        type: string,
+        type:String,
         required: [true,"Username required" ]
     },
     email:{
-        type:string,
+        type:String,
         required: [true,"Email required" ]
     },
     password:{
-        type:string,
+        type:String,
         required: [true,"Password required" ]
+    },
+    is_admin:{
+        type:Boolean,
+        default:true
     }
 
 })

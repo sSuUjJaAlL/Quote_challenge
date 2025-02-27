@@ -24,5 +24,6 @@ connect().then(()=>{
 
 }).catch((err)=>{
     console.log("Database not connected");
+    console.log(err)
 })
 

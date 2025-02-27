@@ -1,7 +1,7 @@
 import mongoose from "mongoose";
 
 async function connect(){
-    const connectMongoose= mongoose.connect("mongodb+srv://sujaladhikari332:kRVmNjHLQs5h1G7S@cluster0.l8ccl.mongodb.net/") 
+    const connectMongoose= mongoose.connect("mongodb+srv://sujal_17:q6mbENJMEIDCk9cG@cluster0.bcm7t.mongodb.net/")
     return connectMongoose
 }
 
