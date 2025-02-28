@@ -6,9 +6,9 @@ async function connect(){
 
     while(retryCount < 4 && retryStatus) {
         const connect = async () => { 
-            const localMongoUrl = 'mongodb://localhost:27017/quotes'
+            // const localMongoUrl = 'mongodb://localhost:27017/quotes'
             const atlsUrl = 'mongodb+srv://sujal_17:q6mbENJMEIDCk9cG@cluster0.bcm7t.mongodb.net/'
-            const connectMongoose= await mongoose.connect(localMongoUrl)
+            const connectMongoose= await mongoose.connect(atlsUrl)
             return connectMongoose
         }
         try{
