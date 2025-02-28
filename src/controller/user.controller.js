@@ -6,9 +6,6 @@ import { signupService,loginService } from "../service/user.service.js";
         const scontroller= await signupService(body);
         return res.status(201).json({
             message :`Id created with ${scontroller.username} username`});
-        
-        
-
     }
     catch(err){
         console.log('Error');

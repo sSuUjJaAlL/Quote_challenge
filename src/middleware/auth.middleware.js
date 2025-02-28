@@ -11,7 +11,7 @@ async function checkToken(req,res,next){
     const secret_key='subodh'
     const decrypt= jwt.verify(token,secret_key);
     req.user=decrypt;
-    next(req);
+    next();
 
 
 }
