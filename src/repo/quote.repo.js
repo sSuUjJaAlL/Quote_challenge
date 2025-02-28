@@ -1,12 +1,13 @@
-import Quote from "../database/admin.schema/quote.schema.js"
-async function insertQuote(quoteandmood){
+// import Quote from "../database/admin.schema/quote.schema.js"
 
-    const insert= await Quote.create({...quoteandmood});
-    return insert
+// async function insertQuote(quoteandmood){
+
+//     const insert= await Quote.create({...quoteandmood});
+//     return insert
 
 
-}
+// }
 
-export{
-    insertQuote
-}
+// export{
+//     insertQuote
+// }

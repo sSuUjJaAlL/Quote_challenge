@@ -1,4 +1,4 @@
-import User from "../database/admin.schema/user.schema.js";
+import User from "../database/user.schema.js";
 
 async function compareEmail(email){
     const cmpemail= await User.findOne({email:email})
@@ -14,12 +14,15 @@ async function userCreate(body){
 async function compareusername(username){
     const cmpusername= await User.findOne({username:username })
     return cmpusername
-    
+}
 
+async function getUserByid(userId){
+    return await User.findOne({_id : userId})
 }
 
 export {
     compareEmail,
     userCreate,
-    compareusername
+    compareusername,
+    getUserByid
 }

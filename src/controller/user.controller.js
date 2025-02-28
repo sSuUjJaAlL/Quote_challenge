@@ -1,6 +1,6 @@
 import { signupService,loginService } from "../service/user.service.js";
 
- async function signUpController(req,res){
+ async function signUpController(req,res,next){
     try{
         const body = req.body;
         const scontroller= await signupService(body);
@@ -8,11 +8,11 @@ import { signupService,loginService } from "../service/user.service.js";
             message :`Id created with ${scontroller.username} username`});
     }
     catch(err){
-        console.log('Error');
+       next(err)
     }
  }
 
- async function loginController(req,res){
+ async function loginController(req,res,next){
 
     try{
         const body =req.body;
@@ -25,7 +25,7 @@ import { signupService,loginService } from "../service/user.service.js";
 
     }
     catch(err){
-        console.log(err)
+        next(err)
     }
 
  }

@@ -34,7 +34,7 @@ async function loginService(username,password){
     const check= await bcrypt.compare(password,getPassword)
 
     if(!check){
-        throw new Error('Fuck subodh');
+        throw new Error('Fuck your ass , Type Valid Password');
     }
     const payload={
         id: checkUsername._id,
