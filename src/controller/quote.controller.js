@@ -9,7 +9,7 @@ async function quoteController(req,res){
 
         const qservice= await quoteService(body,is_admin)
         return res.json({
-            message: "Quote posted ",
+            message: "Quote posted successfully ",
             quote: qservice
         });
 
